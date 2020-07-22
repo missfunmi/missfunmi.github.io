@@ -1,2 +1,2 @@
 # Personal Site
-[missfunmi.github.io](http://missfunmi.github.io)
+[missfunmi.com](https://missfunmi.com)

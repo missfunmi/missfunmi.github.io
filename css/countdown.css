@@ -1,0 +1,30 @@
+body {
+  text-align: center;
+  padding: 40px;
+}
+
+#countdown-heading {
+  font-size: 3.5em;
+  font-weight: 100;
+}
+
+#timer {
+  font-size: 10em;
+  font-weight: 100;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+#timer div {
+  display: inline-block;
+  margin: 10px;
+  color: #6fa2ef;
+}
+
+#timer div span {
+  color: #6fa2ef;
+  display: block;
+  margin-top: 2px;
+  font-size: .35em;
+  font-weight: 400;
+}

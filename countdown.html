@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/countdown.css">
+  <link rel="icon" href="./favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Countdown Timer | Funmi Oludaiye's personal site." />
+  <meta property="og:site_name" content="Funmi Oludaiye" />
+  <meta property="og:title" content="Countdown Timer | Funmi Oludaiye" />
+  <meta property="og:description" content="Countdown Timer | Funmi Oludaiye's personal site." />
+  <meta property="og:image" content="./bio.png" />
+
+  <title>Countdown Timer</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div id="countdown-heading">Countdown to <span id="event-name"></span></div>
+      <div id="timer"></div>      
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript" src="js/countdown.js"></script>
+
+<script type="text/javascript">
+    setInterval('updateTimer()', 1000);
+</script>
+
+</html>

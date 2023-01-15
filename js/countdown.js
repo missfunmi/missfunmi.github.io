@@ -12,7 +12,7 @@ function updateTimer() {
   weeksUntil = Math.floor(timeUntilInMs/(7 * 24 * 60 * 60 * 1000));
   
   daysUntil = Math.floor(timeUntilInMs/(24 * 60 * 60 * 1000));
-  daysUntilLessWeeks = daysUntil % weeksUntil;
+  daysUntilLessWeeks = (weeksUntil > 0) ? (daysUntil % weeksUntil) : daysUntil;
 
   hoursUntil = Math.floor(timeUntilInMs/(60 * 60 * 1000))
   hoursUntilLessDays = hoursUntil - (daysUntil * 24)

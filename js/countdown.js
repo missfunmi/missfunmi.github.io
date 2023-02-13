@@ -1,4 +1,6 @@
-// To use, include in the URL path: ?date=Jun 3, 2023&event=Race Day
+// To use, include query params 'date' and 'event' in the URL path. Valid examples:
+//  ?date=Jun 3, 2023&event=Race Day
+//  ?date=Sat,%2023%20Sept%202023%2005:00:00%20-4&event=Ironman%2070.3%20New%20York (per legacy ES5 date format: https://stackoverflow.com/a/51715260)
 function updateTimer() {
   // Parse input
   queryParams = (location.search.split("?date=")[1]).split("&event="); // Should look something like: Array [ "Jun%203,%202023", "Race%20Day" ]

@@ -21,6 +21,7 @@ function updateTimer() {
 
   // Inject event name and countdown into page
   document.getElementById("event-name").innerHTML = countdownEventName;
+  document.title = "Countdown to " + countdownEventName;
 
   document.getElementById("timer").innerHTML =
     '<div>' + weeksUntil + '<span>Weeks</span></div>' +

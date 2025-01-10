@@ -7,10 +7,40 @@ body {
   font-weight: 100;
 }
 
+#event-name {
+  font-size: 4em;
+  font-weight: 100;
+  color: #be6fef;
+}
+
 #timer {
   font-size: 8.5em;
   font-weight: 100;
   margin: 0 auto;
+}
+
+@media screen and (max-width : 480px) {
+  #countdown-heading {
+    font-size: 2em;
+  }
+  #event-name {
+    font-size: 2.5em;
+  }
+  #timer {
+    font-size: 5.5em;
+  }
+}
+
+@media screen and (max-width : 400px) {
+  #countdown-heading {
+    font-size: 1.5em;
+  }
+  #event-name {
+    font-size: 2em;
+  }
+  #timer {
+    font-size: 4em;
+  }
 }
 
 #timer div {

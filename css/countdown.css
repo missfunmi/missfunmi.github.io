@@ -8,6 +8,7 @@ body {
 }
 
 #event-name {
+  margin: 5px;
   font-size: 4em;
   font-weight: 100;
   color: #be6fef;
@@ -29,6 +30,9 @@ body {
   #timer {
     font-size: 5.5em;
   }
+  #timer div.days-only {
+    font-size: 2.5em;
+  }
 }
 
 @media screen and (max-width : 400px) {
@@ -41,11 +45,13 @@ body {
   #timer {
     font-size: 4em;
   }
+  #timer div.days-only {
+    font-size: 2em;
+  }
 }
 
 #timer div {
   display: inline-block;
-  margin: 5px;
   color: #6fa2ef;
 }
 
@@ -54,4 +60,10 @@ body {
   display: block;
   font-size: .35em;
   font-weight: 400;
+}
+
+#timer div.days-only {
+  color: #088625;
+  display: block;
+  font-size: .35em;
 }

@@ -28,5 +28,6 @@ function updateTimer() {
     '<div>:<span>&nbsp;</span></div>' +
     '<div>' + daysUntilLessWeeks + '<span>Days</span></div>' +
     '<div>:<span>&nbsp;</span></div>' +
-    '<div>' + hoursUntilLessDays + '<span>Hours</span></div>';
+    '<div>' + hoursUntilLessDays + '<span>Hours</span></div>' +
+    '<div class="days-only"> Or ' + daysUntil + '&nbsp;days...</div>';
 }

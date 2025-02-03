@@ -3,9 +3,10 @@
 //  ?date=Sat,%2023%20Sept%202023%2005:00:00%20-4&event=Ironman%2070.3%20New%20York (per legacy ES5 date format: https://stackoverflow.com/a/51715260)
 function updateTimer() {
   // Parse input
-  queryParams = (location.search.split("?date=")[1]).split("&event="); // Should look something like: Array [ "Jun%203,%202023", "Race%20Day" ]
-  countdownTargetDateInMs = Date.parse(queryParams[0].replaceAll("%20"," "));
-  countdownEventName = queryParams[1].replaceAll("%20"," ");
+  queryParams = location.search.split("?date=")[1].split("&event="); // Should look something like: Array [ "Jun%203,%202023", "Race%20Day" ]
+  countdownTargetDate = queryParams[0].replaceAll("%20", " ");
+  countdownTargetDateInMs = Date.parse(countdownTargetDate);
+  countdownEventName = queryParams[1].replaceAll("%20", " ");
 
   // Generate countdown timer
   now = new Date();
@@ -24,10 +25,13 @@ function updateTimer() {
   document.title = "Countdown to " + countdownEventName;
 
   document.getElementById("timer").innerHTML =
-    '<div>' + weeksUntil + '<span>Weeks</span></div>' +
-    '<div>:<span>&nbsp;</span></div>' +
-    '<div>' + daysUntilLessWeeks + '<span>Days</span></div>' +
-    '<div>:<span>&nbsp;</span></div>' +
-    '<div>' + hoursUntilLessDays + '<span>Hours</span></div>' +
-    '<div class="days-only"> Or ' + daysUntil + '&nbsp;days...</div>';
+    timeUntilInMs > 0
+      ? "<div>" + weeksUntil + "<span>Weeks</span></div>" +
+        "<div>:<span>&nbsp;</span></div>" +
+        "<div>" + daysUntilLessWeeks + "<span>Days</span></div>" + 
+        "<div>:<span>&nbsp;</span></div>" +
+        "<div>" + hoursUntilLessDays + "<span>Hours</span></div>" +
+        "<div class='days-only'>Or " + daysUntil + "&nbsp;days...</div>"
+      : "<div class='days-only'>Your timer ran out on</div><div>" + countdownTargetDate + "</div></div>" 
+        + "<div class='days-only'>Hope you crushed it! 😃</div>";
 }

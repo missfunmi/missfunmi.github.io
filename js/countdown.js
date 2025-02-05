@@ -20,10 +20,15 @@ function updateTimer() {
   hoursUntil = Math.floor(timeUntilInMs/(60 * 60 * 1000))
   hoursUntilLessDays = hoursUntil - (daysUntil * 24)
 
-  // Update page title and meta description
+  // Update page title and meta tags
   updatedPageTitle = "Countdown to " + countdownEventName;
+  updatedPageDescription = "A countdown timer to " + countdownEventName;
+
   document.title = updatedPageTitle;
-  document.querySelector('meta[name="description"]').setAttribute('content', updatedPageTitle);
+  document.querySelector('meta[property="og:title"]').setAttribute('content', updatedPageTitle);
+  
+  document.querySelector('meta[name="description"]').setAttribute('content', updatedPageDescription);
+  document.querySelector('meta[property="og:description"]').setAttribute('content', updatedPageDescription);
 
   // Inject event name and countdown into page
   document.getElementById("event-name").innerHTML = countdownEventName;
